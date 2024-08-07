@@ -83,6 +83,7 @@
 <li class="toctree-l3"><a class="reference internal" href="#freshbooks.models.VisState.to_bytes"><code class="docutils literal notranslate"><span class="pre">VisState.to_bytes()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#freshbooks.models.VisState.from_bytes"><code class="docutils literal notranslate"><span class="pre">VisState.from_bytes()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#freshbooks.models.VisState.as_integer_ratio"><code class="docutils literal notranslate"><span class="pre">VisState.as_integer_ratio()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#freshbooks.models.VisState.is_integer"><code class="docutils literal notranslate"><span class="pre">VisState.is_integer()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#freshbooks.models.VisState.real"><code class="docutils literal notranslate"><span class="pre">VisState.real</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#freshbooks.models.VisState.imag"><code class="docutils literal notranslate"><span class="pre">VisState.imag</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#freshbooks.models.VisState.numerator"><code class="docutils literal notranslate"><span class="pre">VisState.numerator</span></code></a></li>
@@ -309,9 +310,8 @@ Indicates whether two’s complement is used to represent the integer.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="freshbooks.models.VisState.as_integer_ratio">
 <span class="sig-name descname"><span class="pre">as_integer_ratio</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#freshbooks.models.VisState.as_integer_ratio" title="Link to this definition"></a></dt>
-<dd><p>Return integer ratio.</p>
-<p>Return a pair of integers, whose ratio is exactly equal to the original int
-and with a positive denominator.</p>
+<dd><p>Return a pair of integers, whose ratio is equal to the original int.</p>
+<p>The ratio is in lowest terms and has a positive denominator.</p>
 <blockquote>
 <div><p>(10).as_integer_ratio()
 (10, 1)
@@ -320,6 +320,12 @@ and with a positive denominator.</p>
 (0).as_integer_ratio()
 (0, 1)</p>
 </div></blockquote>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="freshbooks.models.VisState.is_integer">
+<span class="sig-name descname"><span class="pre">is_integer</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#freshbooks.models.VisState.is_integer" title="Link to this definition"></a></dt>
+<dd><p>Returns True. Exists for duck type compatibility with float.is_integer.</p>
 </dd></dl>
 
 <dl class="py attribute">
